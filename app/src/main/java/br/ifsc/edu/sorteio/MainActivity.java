@@ -7,24 +7,30 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
 
-    EditText editTextInical,editTextfinal;
+    EditText editTextInicial ;
+    EditText editTextFinal   ;
     TextView textViewResultado;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextInical = findViewById(R.id.editTextInicial);
-        editTextfinal = findViewById(R.id.editTextfinal);
-        textViewResultado =  findViewById(R.id.textViewResultado);
+        editTextInicial   = findViewById(R.id.editTextInicial  );
+        editTextFinal     = findViewById(R.id.editTextfinal    );
+        textViewResultado = findViewById(R.id.textViewResultado);
+
     }
 
-    public void sortear (View view){
-        int inicial = Integer.parseInt(editTextInical.getText().toString());
-        int fim = Integer.parseInt(editTextfinal.getText().toString());
-        textViewResultado.setText(Integer.toString(inicial));
+    public void sortear(View view)
+    {
+        int inicial = Integer.parseInt(editTextInicial.getText().toString());
+        int fina = Integer.parseInt(editTextFinal.getText().toString());
+        int random = 0;
+        textViewResultado.setText(Integer.toString(random));
+
     }
 }
